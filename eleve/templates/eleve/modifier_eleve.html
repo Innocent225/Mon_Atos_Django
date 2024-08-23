@@ -13,38 +13,39 @@
         <h2>Mon Etab</h2>
         <hr>
         <ul>
-            <li>
-                <a href="{% url 'dashboad'%}"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+            <li >
+                <a href="{% url 'dashbord:dashboad'%}"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
             </li>
             <li class="active">
-                <a href="{% url 'eleve'%}"><i class="fas fa-user-graduate"></i> Élèves</a>
+                <a href="{% url 'eleve:eleve1'%}"><i class="fas fa-user-graduate"></i> Élèves</a>
             </li>
             <li>
-                <a href="{% url 'professeurs'%}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a>
+                <a href="{% url 'teacher:professeurs'%}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a>
             </li>
             <li>
-                <a href="{% url 'utilisateurs'%}"><i class="fas fa-chart-line"></i> utilisateurs</a>
+                <a href="{% url 'user:utilisateurs'%}"><i class="fas fa-chart-line"></i> utilisateurs</a>
             </li>
             <li>
-                <a href="{% url 'rapport'%}"><i class="fas fa-chart-line"></i> Rapport</a>
+                <a href="{% url 'rapport:rapport1'%}"><i class="fas fa-chart-line"></i> Rapport</a>
             </li>
         </ul>
         <hr style="margin-top:270px;">
         <ul>
             <li>
-                <a href="{% url 'index'%}"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                <a href="{% url 'dashbord:index'%}"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
             </li>
         </ul>
     </div>
 
     <div class="content">
         <div class="back-button" style="justify-content: flex-end;" >
-            <a href="{% url 'eleve'%}"><i class="fas fa-arrow-left"></i> Retour</a>
+            <a href="{% url 'eleve:eleve1'%}"><i class="fas fa-arrow-left"></i> Retour</a>
         </div>
 
         <div class="form-container">
             <h1>Modifier un élève</h1>
-
+            <!--Champ form-->
+                {{form}}
             <div class="form-group">
                 <label for="nom">Nom</label>
                 <input type="text" id="nom" name="nom">
